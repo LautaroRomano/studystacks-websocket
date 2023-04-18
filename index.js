@@ -11,6 +11,7 @@ try {
     ws.on("message", function incoming(message) {
       try {
         const data = JSON.parse(message);
+        console.log(data)
         for (const connection of connections) {
           connection.send(JSON.stringify(data));
         }
