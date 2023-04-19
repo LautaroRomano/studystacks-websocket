@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
 
 const setupWebSocket = (req, res) => {
   try {
-    const wss = new WebSocket.Server({ port: 403 });
+    const wss = new WebSocket.Server({ port: 5000 });
 
     wss.on("connection", function connection(ws, req) {
       connections.add(ws);
